@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users
   resources :session, only: [:new, :create, :destroy]
   # You can have the root of your site routed with "root"
-  root 'users#new'
+  root 'users#index'
   get "/log-in" => "sessions#new"
   post "/log-in" => "sessions#create"
   get "/log-out" => "sessions#destroy"
